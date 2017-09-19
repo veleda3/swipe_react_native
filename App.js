@@ -18,19 +18,20 @@ export default class App extends React.Component {
   renderCard(item) {
     return (
       <Card
+        key={item.id}
         title={item.text}
         image={{ uri: item.uri }}
       >
         <Text style={{ marginBottom: 10 }}>
-          i can edit test
+          I can customize the Card further.
         </Text>
         <Button
-        icon={{ name: 'code' }}
-        backgroundColor="#03A9F4"
-        title="View Now"
+          icon={{ name: 'code' }}
+          backgroundColor="#03A9F4"
+          title="View Now!"
         />
       </Card>
-    )
+    );
   }
 
   render() {
